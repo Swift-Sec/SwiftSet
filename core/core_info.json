@@ -1,0 +1,51 @@
+{
+    "crsf":{
+        "description":"Scans for cross-origin resource sharing misconfigurations",
+        "integrity":"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+
+    "ssrf":{
+        "description":"Scans for misconfigurations leading to SSRF",
+        "integrity":"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+
+    "xss":{
+        "description":"Scans for reflections and unsanitized content",
+        "integrity":"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+
+    "sqli":{
+        "description":"Scans for unsanitized inputs and params",
+        "integrity":"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+
+    "secrets":{
+        "description":"Scans for hardcoded api keys on the client source",
+        "integrity":"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+
+    "crawler":{
+        "description":"Crawls the websites to uncover more vectors of attack",
+        "integrity":"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+
+    "fuzz":{
+        "description":"Fuzzes the website to uncover hidden files/directories",
+        "integrity":"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+
+    "idor":{
+        "description":"Scans for IDOR vulns where access controls can be bypassed by manipulating object identifiers",
+        "integrity":"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+
+    "nmap":{
+        "description":"Port scans a target to look for open ports and running services",
+        "integrity":"33da3b24ad474626f4e7985b5ff87a465078b4b3223a9de251d5dbbd6ef2cb78"
+    },
+
+    "subdomain_search":{
+        "description":"Search for subdomains on the target",
+        "integrity":"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+}
