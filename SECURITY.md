@@ -8,11 +8,11 @@ archonxk@firemail.cc <br>
 
 Please include the requested information listed below o help us better understand the nature and scope of the possible issue:
 
-Type of issue
-The location of the affected source code
-Any special configuration required to reproduce the issue
-Step-by-step instructions to reproduce the issue
-Proof-of-concept or exploit code (if possible)
-Impact of the issue, including how an attacker might exploit the issue
-
+Type of issue <br>
+The location of the affected source code <br>
+Any special configuration required to reproduce the issue <br>
+Step-by-step instructions to reproduce the issue <br>
+Proof-of-concept or exploit code (if possible) <br>
+Impact of the issue, including how an attacker might exploit the issue <br>
+ <br><br>
 We prefer all communications to be in English.
