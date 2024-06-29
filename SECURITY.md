@@ -3,7 +3,7 @@ Security
 If you believe you have found a vulnerability in this source code repository which impacts the confidentiality, integrity or availability of data on the systems of people using swiftset, please report it to us.
 Please do not report security vulnerabilities using github issues and instead send an email at any one of the addresses given below.
 
-archonxk@firemail.cc \n
+archonxk@firemail.cc <br>
 174117765+Nardimer@users.noreply.github.com
 
 Please include the requested information listed below o help us better understand the nature and scope of the possible issue:
