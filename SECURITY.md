@@ -1,6 +1,6 @@
 Security
 
-If you believe you have found a vulnerability in this source code repository which impacts the confidentiality, integrity or availability of data on the systems of people using swiftset, please report it to us.
+If you believe you have found a vulnerability in this source code repository which impacts the confidentiality, integrity or availability of data on the systems of people using swiftset, please report it to us.<br>
 Please do not report security vulnerabilities using github issues and instead send an email at any one of the addresses given below.
 
 archonxk@firemail.cc <br>
