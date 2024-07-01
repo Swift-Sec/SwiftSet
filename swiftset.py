@@ -7,9 +7,21 @@ import json
 
 def clear_screen():
     if os.name == "nt":
-        os.system("cls")
+        try:
+            os.system("cls")
+        except Exception as e:
+            print(f"Error clearing screen --> \n{e}")
     else:
-        os.system("clear")
+        try:
+            os.system("clear")
+        except Exception as e:
+            print(f"Error clearing screen --> \n{e}")
+
+def install_modules():
+    try:
+        os.system("python -m pip install -r requirements.txt --no-deps --ignore-installed")
+    except Exception as e:
+        print(f"Error installing modules --> \n{e}")
 
 def banner():
     print("""
