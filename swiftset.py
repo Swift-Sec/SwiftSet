@@ -48,6 +48,7 @@ def parse():
     return parser.parse_args()
 
 def main():
+    install_modules()
     clear_screen()
     banner()
     version = "beta-dev"
