@@ -1,5 +1,6 @@
 import os
 from core.nmap import *
+from core.report import *
 import sys
 import argparse
 import json
@@ -43,6 +44,7 @@ def parse():
     parser.add_argument("--all_scans", help = "Run all available scans", action = "store_true")
     parser.add_argument("--core_scans", help = "Run all available core scans", action = "store_true")
     parser.add_argument("--specific_scans", help = "Run some specific scans (comma seperated)")
+    parser.add_argument("--report_path", help = "Sets the report path to the specified directory")
 
 
     return parser.parse_args()
@@ -73,14 +75,18 @@ def main():
                 core_info = json.loads(core_info)
                 
                 if extension == "py" and file_name in valid_core_modules:
-                    print(f"CORE MODULE : {file_name} | {core_info[file_name]["description"]}")
+                    print(f"CORE MODULE : {file_name} | {core_info[file_name]['description']}")
 
     if args.core_scans:
         if args.url:
             print(f"STARTING ALL CORE SCANS ON {args.url}")
         else:
-            print("No url/domain found. Please enter one with the arg --url / -u")
+            print("No url/domain found. Please enter one with the arg --url")
         
-
+    if args.report_path:
+        if args.report_path:
+            set_output_path(args.report_path)
+        else:
+            print("No directory/location provided. Please enter one with the arg --report_path")
 if __name__ == "__main__":
     main()

@@ -47,5 +47,10 @@
     "subdomain_search":{
         "description":"Search for subdomains on the target",
         "integrity":"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+
+    "pdf":{
+        "description":"Converts any specified file into a .pdf",
+        "integrity":"f420ae08f10e0782c669ba9693ed9a4b5ff9a5ce1d0c4c32ae7c4ae1f08b3218"
     }
 }
