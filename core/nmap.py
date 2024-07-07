@@ -47,32 +47,11 @@ def scanner(domain , type_of_scan="1000"):
     except Exception as e:
         print(e)
 
-    try:
-        param = '-n' if platform.system().lower()=='windows' else '-c'
-        command = ['ping', param, '1', ip_to_scan]
-        ping_time = int(subprocess.check_output(command).decode().split("\n")[1].split("time=")[1].split(" ")[0].split(".")[0])
+    if type_of_scan == "1000":
+        timeout = 5
+    elif type_of_scan == "all":
+        timeout = 2
 
-        if ping_time < 100:
-            timeout = 0.5
-        elif ping_time < 500:
-            timeout = 1
-        elif ping_time < 1000:
-            timeout = 3
-        elif ping_time < 2000:
-            timeout = 5
-        elif ping_time < 3000:
-            timeout = 8
-        elif ping_time < 5000:
-            timeout = 10
-    except Exception as e:
-        print(e)
-        if type_of_scan == "1000":
-            timeout = 5
-        elif type_of_scan == "all":
-            timeout = 2
-        else:
-            print("INVALID SCAN TYPE. QUITTING")
-            quit()
 
 
     if type_of_scan == "1000":
