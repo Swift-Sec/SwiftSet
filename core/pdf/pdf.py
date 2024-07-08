@@ -38,10 +38,23 @@ def split_lines(text, max_chars):
                 lines.append(line)
     return lines
 
-def text_to_pdf(input_file, output_dir):
+def text_to_pdf(input_file, output_path):
     max_line_length=100
     y_start=700
-    output_file = os.path.join(output_dir, os.path.splitext(os.path.basename(input_file))[0] + '.pdf')
+    if ".pdf" in output_path:
+        output_file = output_path
+    else:
+        output_file = f"{output_path}.pdf"
+
+    if os.path.isfile(output_file):
+        pass
+    else:
+        try:
+            f = open(output_file , "w")
+            f.wirte()
+            f.close()
+        except:
+            print("ERROR CREATING PDF REPORT")
     
     c = canvas.Canvas(output_file, pagesize=letter)
     width, height = letter
@@ -71,5 +84,10 @@ def text_to_pdf(input_file, output_dir):
 
 def set_output_path(path):
     input_file = os.path.join(script_dir, "results.txt")
-    output_dir = path
-    text_to_pdf(input_file, output_dir)
+    text_to_pdf(input_file, path)
+
+def initialize_state():
+    input_file = os.path.join(script_dir, "results.txt")
+    f = open(input_file , "w")
+    f.write("#Swift-Sec - Pentesting made easy \n##Swift Set Penetration Testing Framework")
+    f.close()
