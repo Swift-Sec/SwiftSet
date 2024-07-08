@@ -3,7 +3,6 @@ from reportlab.lib.pagesizes import letter
 from reportlab.pdfgen import canvas
 
 script_dir = os.path.dirname(os.path.abspath(__file__))
-input_file = os.path.join(script_dir, "results.txt")
 
 def get_text_size_and_style(line):
     if line.startswith('#####'):
@@ -39,8 +38,9 @@ def split_lines(text, max_chars):
                 lines.append(line)
     return lines
 
-def text_to_pdf(input_file, max_line_length=100, y_start=700):
-    output_dir = script_dir
+def text_to_pdf(input_file, output_dir):
+    max_line_length=100
+    y_start=700
     output_file = os.path.join(output_dir, os.path.splitext(os.path.basename(input_file))[0] + '.pdf')
     
     c = canvas.Canvas(output_file, pagesize=letter)
@@ -70,5 +70,6 @@ def text_to_pdf(input_file, max_line_length=100, y_start=700):
     print(f'Report has been saved to {output_file}')
 
 def set_output_path(path):
+    input_file = os.path.join(script_dir, "results.txt")
     output_dir = path
     text_to_pdf(input_file, output_dir)
