@@ -84,4 +84,6 @@ def main():
 
         
 if __name__ == "__main__":
+    with open("core/pdf/results.txt", "w") as f:
+        f.write("#Swiftset - Pentesting made easy\n##Swift-Sec")
     main()
