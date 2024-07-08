@@ -1,5 +1,6 @@
 import os
 import core.pdf.pdf as pdf_handler
+import core.crawler as username_crawler
 import sys
 import argparse
 import json
@@ -40,6 +41,7 @@ def parse():
     parser.add_argument("--core_scans", help = "Run all available core scans", action = "store_true")
     parser.add_argument("--specific_scans", help = "Run some specific scans (comma seperated)")
     parser.add_argument("--report_path", help = "Sets the report path to the specified directory")
+    parser.add_argument("--username_crawler", help = "Searches for the provided username across several social medias and websites")
 
 
     return parser.parse_args()
@@ -168,8 +170,9 @@ def main():
                 print("No directory/location provided. Please enter one with the arg --report_path")
         else:
             print("No url/domain found. Please enter one with the arg --url")
-        
-        
+
+    if args.username_crawler:
+        username_crawler.crawl(args.username_crawler)
             
         
 if __name__ == "__main__":
