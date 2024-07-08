@@ -166,7 +166,7 @@ def initialize_csrf(url_list , headers=False , user_agent_randomization=False):
 
 ## Overview
 
-The website "example.com" was thoroughly tested for Cross-Site Request Forgery (CSRF) vulnerabilities.
+The website {url_list} was thoroughly tested for Cross-Site Request Forgery (CSRF) vulnerabilities.
 
 ### Testing Procedure
 
