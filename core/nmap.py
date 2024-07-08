@@ -44,6 +44,7 @@ def scanner(domain , type_of_scan="1000"):
     try:
         open_tcp_ports = []
         ip_to_scan = socket.gethostbyname(domain) 
+        print(ip_to_scan)
     except Exception as e:
         print(e)
 
@@ -52,7 +53,7 @@ def scanner(domain , type_of_scan="1000"):
     elif type_of_scan == "all":
         timeout = 2
 
-
+    print(ip_to_scan)
 
     if type_of_scan == "1000":
         print(f"PORT SCAN: SCANNING MOST COMMON 1000 PORTS | ESTIMATED TIME TO COMPLETION --> {16 * timeout} minutes")
