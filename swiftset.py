@@ -1,6 +1,6 @@
 import os
 import core.pdf.pdf as pdf_handler
-import core.crawler as username_crawler
+import corr.website_crawler as website_crawler
 import sys
 import argparse
 import json
@@ -42,7 +42,8 @@ def parse():
     parser.add_argument("--specific_scans", help = "Run some specific scans (comma seperated)")
     parser.add_argument("--report_path", help = "Sets the report path to the specified directory")
     parser.add_argument("--username_crawler", help = "Searches for the provided username across several social medias and websites")
-
+    parser.add_argument("--website_crawler", help = "Crawl a given URL, extract further URLs, and continue crawling them up to a specified depth.", action = "store_true")
+    parser.add_argument("--depth", type = int, help = "Sets the depth in which the website_crawler should go")
 
     return parser.parse_args()
 
@@ -171,8 +172,8 @@ def main():
         else:
             print("No url/domain found. Please enter one with the arg --url")
 
-    if args.username_crawler:
-        username_crawler.crawl(args.username_crawler)
+    if args.website_crawler:
+            website_crawler.crawl(args.url, args.depth)
             
         
 if __name__ == "__main__":
