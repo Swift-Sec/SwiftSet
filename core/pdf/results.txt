@@ -1,2 +1,40 @@
 #Swiftset - Pentesting made easy
 ##Swift-Sec
+
+
+# CSRF
+
+## Overview
+
+The website "example.com" was thoroughly tested for Cross-Site Request Forgery (CSRF) vulnerabilities.
+
+### Testing Procedure
+
+A comprehensive security assessment was conducted, focusing on potential CSRF vulnerabilities across various endpoints.
+
+### Results
+
+No CSRF vulnerabilities were found during the testing process. Each tested endpoint implemented robust security measures to prevent CSRF attacks.
+
+### Security Measures Implemented
+
+The website employs several effective strategies to mitigate CSRF risks:
+
+- **CSRF Tokens:** Each sensitive request includes a unique token that is validated on the server side, ensuring authenticity and preventing unauthorized actions.
+- **SameSite Cookie Attribute:** Cookies are set with the SameSite attribute to `Strict` or `Lax`, which restricts the inclusion of cookies in cross-site requests.
+- **Referer Header Validation:** Requests are validated to ensure they originate from trusted sources, further mitigating the risk of CSRF attacks.
+
+### Recommendations
+
+Although no vulnerabilities were found, maintaining a proactive approach to security is crucial. Here are some best practices:
+
+- **Regular Security Audits:** Conduct periodic security assessments to ensure no new vulnerabilities are introduced.
+- **User Education:** Inform users about safe browsing practices and the importance of not clicking on suspicious links.
+- **Stay Updated:** Keep security measures up-to-date with the latest industry standards and recommendations.
+
+### Conclusion
+
+The website ['https://discord.com'] demonstrates a strong security posture against CSRF vulnerabilities. By continuing to implement and update robust security measures, the website can maintain its protection against potential CSRF attacks.
+
+---
+

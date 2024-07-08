@@ -199,8 +199,7 @@ The website {url_list} demonstrates a strong security posture against CSRF vulne
 ---
 
 """
-        if "No issue" in issues:
-            f.write(template)
-        f.close()
+            if "No issue" in issues:
+                f.write(template)
 
     return all_cors_issues
