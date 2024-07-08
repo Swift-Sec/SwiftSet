@@ -5,8 +5,9 @@ Please do not report security vulnerabilities using github issues and instead se
 
 archonxk@firemail.cc <br>
 174117765+Nardimer@users.noreply.github.com
+174118662+lightning-christ@users.noreply.github.com
 
-Please include the requested information listed below o help us better understand the nature and scope of the possible issue:
+Please include the requested information listed below to help us better understand the nature and scope of the possible issue:
 
 Type of issue <br>
 The location of the affected source code <br>

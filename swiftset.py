@@ -1,5 +1,7 @@
 import os
 from core.nmap import *
+from core.csrf import *
+from core.pdf.pdf import *
 from core.report import *
 import sys
 import argparse
@@ -80,6 +82,7 @@ def main():
     if args.core_scans:
         if args.url:
             print(f"STARTING ALL CORE SCANS ON {args.url}")
+            print(initialize_csrf([args.url]))
         else:
             print("No url/domain found. Please enter one with the arg --url")
         
@@ -89,4 +92,9 @@ def main():
         else:
             print("No directory/location provided. Please enter one with the arg --report_path")
 if __name__ == "__main__":
+    with open("core/pdf/results.txt", "w") as f:
+        f.write("#Swiftset - Pentesting made easy\n##Swift-Sec\n\n")
+        f.close()
     main()
+    input_file = "core/pdf/results.txt"
+    text_to_pdf(input_file, max_line_length=100, y_start=700)
