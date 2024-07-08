@@ -39,7 +39,8 @@ def split_lines(text, max_chars):
                 lines.append(line)
     return lines
 
-def text_to_pdf(input_file, output_dir, max_line_length=100, y_start=700):
+def text_to_pdf(input_file, max_line_length=100, y_start=700):
+    output_dir = script_dir
     output_file = os.path.join(output_dir, os.path.splitext(os.path.basename(input_file))[0] + '.pdf')
     
     c = canvas.Canvas(output_file, pagesize=letter)
@@ -71,5 +72,3 @@ def text_to_pdf(input_file, output_dir, max_line_length=100, y_start=700):
 def set_output_path(path):
     output_dir = path
     text_to_pdf(input_file, output_dir)
-
-output_directory = script_dir

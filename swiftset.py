@@ -1,6 +1,7 @@
 import os
 from core.nmap import *
 from core.csrf import *
+from core.pdf.pdf import *
 import sys
 import argparse
 import json
@@ -89,3 +90,5 @@ if __name__ == "__main__":
         f.write("#Swiftset - Pentesting made easy\n##Swift-Sec\n\n")
         f.close()
     main()
+    input_file = "core/pdf/results.txt"
+    text_to_pdf(input_file, max_line_length=100, y_start=700)

@@ -6,7 +6,7 @@
 
 ## Overview
 
-The website "example.com" was thoroughly tested for Cross-Site Request Forgery (CSRF) vulnerabilities.
+The website ['https://discord.com'] was thoroughly tested for Cross-Site Request Forgery (CSRF) vulnerabilities.
 
 ### Testing Procedure
 
