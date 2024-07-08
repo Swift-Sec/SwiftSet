@@ -1,5 +1,5 @@
 import os
-import core
+from core.nmap import *
 import sys
 import argparse
 import json
@@ -78,9 +78,10 @@ def main():
     if args.core_scans:
         if args.url:
             print(f"STARTING ALL CORE SCANS ON {args.url}")
-            print(core.nmap.scanner(args.url))
+            print(scanner(args.url))
         else:
             print("No url/domain found. Please enter one with the arg --url / -u")
+
         
 if __name__ == "__main__":
     main()
