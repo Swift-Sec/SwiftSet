@@ -91,7 +91,4 @@ def main():
         else:
             print("No directory/location provided. Please enter one with the arg --report_path")
 if __name__ == "__main__":
-    with open("core/pdf/results.txt", "w") as f:
-        f.write("#Swiftset - Pentesting made easy\n##Swift-Sec\n\n")
-        f.close()
     main()
