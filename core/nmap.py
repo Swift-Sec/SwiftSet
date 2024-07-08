@@ -44,7 +44,6 @@ def scanner(domain , type_of_scan="1000"):
     try:
         open_tcp_ports = []
         ip_to_scan = socket.gethostbyname(domain)
-        print(ip_to_scan)
     except Exception as e:
         print(e)
 
