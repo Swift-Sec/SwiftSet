@@ -43,7 +43,7 @@ def scan_url(url , headers):
         if "access-control-allow-credentials" in response_headers.keys():
             acac_header = response_headers["access-control-allow-credentials"]
             current_issues.append("Credentials allowed")
-        #return [url , current_issues]
+        return [url , current_issues]
 
     #pre domain wildcard scan
     random_letters = generate_random_string()
@@ -131,7 +131,10 @@ def scan_url(url , headers):
                 if "Credentials allowed" not in current_issues:
                     current_issues.append("Credentials allowed")
 
-    return [url , current_issues]
+    if len(current_issues) ==0:
+        return [url , "No issue"]
+    else:
+        return [url , current_issues]
 
 def initialize_csrf(url_list , headers=False , user_agent_randomization=False):
     all_cors_issues = []
@@ -159,47 +162,5 @@ def initialize_csrf(url_list , headers=False , user_agent_randomization=False):
     for url in url_list:
         issues = scan_url(url.strip(), headers)
         all_cors_issues.append(issues)
-
-        with open("core/pdf/results.txt", "a") as f:
-            template = f"""
-# CSRF
-
-## Overview
-
-The website {url_list} was thoroughly tested for Cross-Site Request Forgery (CSRF) vulnerabilities.
-
-### Testing Procedure
-
-A comprehensive security assessment was conducted, focusing on potential CSRF vulnerabilities across various endpoints.
-
-### Results
-
-No CSRF vulnerabilities were found during the testing process. Each tested endpoint implemented robust security measures to prevent CSRF attacks.
-
-### Security Measures Implemented
-
-The website employs several effective strategies to mitigate CSRF risks:
-
-- **CSRF Tokens:** Each sensitive request includes a unique token that is validated on the server side, ensuring authenticity and preventing unauthorized actions.
-- **SameSite Cookie Attribute:** Cookies are set with the SameSite attribute to `Strict` or `Lax`, which restricts the inclusion of cookies in cross-site requests.
-- **Referer Header Validation:** Requests are validated to ensure they originate from trusted sources, further mitigating the risk of CSRF attacks.
-
-### Recommendations
-
-Although no vulnerabilities were found, maintaining a proactive approach to security is crucial. Here are some best practices:
-
-- **Regular Security Audits:** Conduct periodic security assessments to ensure no new vulnerabilities are introduced.
-- **User Education:** Inform users about safe browsing practices and the importance of not clicking on suspicious links.
-- **Stay Updated:** Keep security measures up-to-date with the latest industry standards and recommendations.
-
-### Conclusion
-
-The website {url_list} demonstrates a strong security posture against CSRF vulnerabilities. By continuing to implement and update robust security measures, the website can maintain its protection against potential CSRF attacks.
-
----
-
-"""
-            if "No issue" in issues:
-                f.write(template)
 
     return all_cors_issues
