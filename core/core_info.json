@@ -1,7 +1,7 @@
 {
     "crsf":{
         "description":"Scans for cross-origin resource sharing misconfigurations",
-        "integrity":"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        "integrity":"3f6b1cde279bd179a8b3d64351bd5941b86f2c313c5ff9ac273470076e3c818a"
     },
 
     "ssrf":{
@@ -41,7 +41,7 @@
 
     "nmap":{
         "description":"Port scans a target to look for open ports and running services",
-        "integrity":"33da3b24ad474626f4e7985b5ff87a465078b4b3223a9de251d5dbbd6ef2cb78"
+        "integrity":"2ad3cc8252451c42c9f6df37261f77e17558c40c22e1a7717ed3156a1cbb7056"
     },
 
     "subdomain_search":{
@@ -50,7 +50,7 @@
     },
 
     "pdf":{
-        "description":"Converts any specified file into a .pdf",
-        "integrity":"f420ae08f10e0782c669ba9693ed9a4b5ff9a5ce1d0c4c32ae7c4ae1f08b3218"
+        "description":"Generates PDF reports",
+        "integrity":"ff1009f4019d7052a8ad063be1a17412708634548414afd97b36d456d935897ea"
     }
 }
