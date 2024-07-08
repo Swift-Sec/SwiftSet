@@ -60,12 +60,10 @@ def scanner(domain , type_of_scan="1000"):
     else:
         print("INVALID SCAN TYPE. QUITTING")
         quit()
-
-
     
     if type_of_scan == "1000":
         top_1000_tcp = initialize_top_1000()
-        open_tcp_ports = scan_through_a_range([1, 2] , ip_to_scan , timeout)
+        open_tcp_ports = scan_through_a_range(top_1000_tcp, ip_to_scan , timeout)
     elif type_of_scan == "all":
         open_tcp_ports = scan_through_a_range([*range(0 , 65535)] , ip_to_scan , timeout)
     else:
