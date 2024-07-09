@@ -1,6 +1,6 @@
 import os
 import core.pdf.pdf as pdf_handler
-import corr.website_crawler as website_crawler
+import core.crawler as website_crawler
 import sys
 import argparse
 import json
