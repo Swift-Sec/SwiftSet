@@ -1,0 +1,87 @@
+Features for Swift Sec
+
+Port scan [Done]
+Pdf report gen [Done]
+
+Parameter digging
+Subdomain scanner
+SQLi
+Better CSRF scanning
+Better crawling
+Url fuzzer
+SSRF
+XSS
+Tool for exposed .git files
+Open redirect scanner
+NoSQLi
+A tool for cracking jwt tokens
+Default creds checker
+Login form bruteforce
+XSSI
+Dependency confusion
+Secrets scanner
+Github/gitlab/bitbucket dorking tool
+Tool for aws shit (s3 buckets, ec2 instances)
+Tools for website builders like wordpress
+Subdomain takeover
+Broken social media links tool
+XXE injection
+IDOR scanner
+Header injection
+GraphQL vuln scanner
+Directory traversal
+CRLF injection
+Support for known exploitable CVEs
+Weak cipher scanner
+SSL cert scanning
+HSTS weakness scanners
+Tools for SSL vulns like heartbleed, poodle etc
+SSTI
+Prototype pollution scanning
+Weak and oudated js library scanner
+Cache poisoning
+Looking for misconfigured SKPF and DMARC email records
+Basic DoS scanning
+Scanning for technologies being used and checking againsts cves
+Source code disclosure
+Clickjacking
+Improper cookie properties
+Insecure iframe scanning
+Version disclosure
+Fileupload vuln scanning
+Improper subsource integrity
+Xpath injection
+SAML attacks
+LDAP injection
+ReDOS
+XPATH injection
+XXE Injection
+Unicode injection
+CSTI
+Specialised shit for nginx, apache
+Formula injection
+SSI
+IMAP and SMTP injection
+Remote file inclusion
+Command injection
+Format string injection
+Track/Delete/Trace methods available
+User enumeration
+Password case sensitivity check
+No max password length
+HTML/CSS injection
+HTTP request smuggling
+HTTP param pollution
+HTTP verb tampering
+Cache deception
+Directory listings
+Admin panel exposure
+Websocket vulns
+Google + other search engines dorking tool
+Race conditions
+
+--Other modules--
+FTP and SFTP vuln scanning
+SSH vuln scanning
+POP vulns
+Telnet vulns
