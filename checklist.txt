@@ -3,9 +3,9 @@ Features for Swift Sec
 Port scan [Done]
 Pdf report gen [Done]
 CORS [Done]
+Subdomain scanner [Bruteforce done]
 
 Parameter digging
-Subdomain scanner
 SQLi
 Better CSRF scanning
 Better crawling
